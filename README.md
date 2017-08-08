@@ -10,7 +10,7 @@ Why?
 
 [spotify/docker-kafka](https://github.com/spotify/docker-kafka) it provides of a kafka docker image that contains a specific kafka version (the last version was 0.10.1.0) but it is useful to have similar images with other versions. This repo contain a parametrizable docker file and the public builds is tagged with the same kafka version that provedes
 Run
----
+
 
 ```bash
 docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`docker-machine active\`` --env ADVERTISED_PORT=9092 fhuertas/docker-kafka
