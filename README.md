@@ -19,7 +19,7 @@ docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`
 Public Builds
 ---
 
-https://registry.hub.docker.com/u/fhuertas/kafka/
+https://hub.docker.com/r/fhuertas/docker-kafka/
 
 
 Build from Source
