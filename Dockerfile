@@ -14,7 +14,7 @@ RUN apt-get update && \
     apt-get clean && \
     wget -q http://apache.mirrors.spacedump.net/kafka/"$KAFKA_VERSION"/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -O /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz && \
     tar xfz /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -C /opt && \
-    ln -s /opt/kafka_2.11-0.10.0.1/ /opt/kafka && \
+    mv /opt/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION"/ /opt/kafka && \
     rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
 
 ADD scripts/kafka-service.sh /etc/init.d/
