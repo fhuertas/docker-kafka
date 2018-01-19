@@ -1,0 +1,11 @@
+language: generic
+sudo: required
+
+services:
+  - docker
+
+compile:
+  - ./dist/build_all.sh
+
+# publish:
+#   - ./dist/docker_push.sh
