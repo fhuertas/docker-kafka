@@ -28,7 +28,10 @@ Build from Source
 ---
 This is a example for scala 2.11 and kafka 0.10.0.1
 ```bash
-docker build -t kafka:0.10.0.1 --build-arg SCALA_VERSION=2.11 --build-arg KAFKA_VERSION=0.10.0.1 .
+docker build -t kafka:0.10.0.1 \
+  --build-arg SCALA_VERSION=2.11 \
+  --build-arg KAFKA_VERSION=0.10.0.1 \
+  --build-arg DOWNLOAD_URL="https://archive.apache.org/dist/kafka"
 ```    
 
 Todo
