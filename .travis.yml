@@ -4,8 +4,15 @@ sudo: required
 services:
   - docker
 
-compile:
+script:
   - ./dist/build_all.sh
+
+deploy:
+  provider: script
+  script: ./dist/docker_push.sh
+  on:
+    branch: release
+
 
 # publish:
 #   - ./dist/docker_push.sh
