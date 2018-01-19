@@ -1,6 +1,8 @@
 Kafka in Docker
 ===
 
+[![Build Status](https://travis-ci.org/fhuertas/docker-kafka.svg?branch=master)](https://travis-ci.org/fhuertas/docker-kafka)
+
 This repository provides everything you need to run Kafka in Docker. It is based
 on the [spotify/docker-kafka](https://github.com/spotify/docker-kafka) repository.  
 
