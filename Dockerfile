@@ -13,7 +13,8 @@ ENV URL_BASE "$DOWNLOAD_URL"/"$KAFKA_VERSION"/kafka_"$SCALA_VERSION"-"$KAFKA_VER
 RUN wget -q $URL_BASE -O /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz && \
     tar xfz /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -C /opt && \
     mv /opt/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION"/ /opt/kafka && \
-    rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
+    rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz && \
+    echo "export PATH=$PATH:/opt/kafka/bin" >> /etc/bash.bashrc 
 
 ADD scripts/kafka-service.sh /etc/init.d/
 ADD scripts/entrypoint.sh /entrypoint.sh
